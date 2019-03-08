@@ -1,20 +1,28 @@
-(function() {
-  'use strict' 
-  paper.install(window);
-  paper.setup(document.getElementById('mainCanvas'));
+$(document).ready(function (){
+  console.log("You are reading this orm the console");
 
-  // var c;
-  for(var x25; x<400; x+=50 {
-      for(var y=25; y<400; y+=50) {
-          c = Shape.Circle(x, y, 20);
-          c.fillColor = 'green';
-      }
-  })
+  
+
+
+  $("h1").css("color", "red");
+  $("h1").innerHtml = "changed from main.js";
+
+
+  paper.install(window);
+  //paper.setup(document.getElementById("mainCanvas"));
+  paper.setup($("#mainCanvas")[0]);
+  var c = Shape.Circle(200,200, 50);
+
+  c.fillColor = "green";
+
+
 
   paper.view.draw();
   // your code will start here...
+  
+                
 
-console.log('main.js loaded');
+('main.js loaded');
 
-  // ...and end here 
-}())
+  // ...and end here
+});
